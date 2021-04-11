@@ -1,33 +1,31 @@
 
-// Copyright (c) 2020 Paul Raffer.
+// Copyright Paul Raffer 2020 - 2021.
 // Distributed under the Boost Software License, Version 1.0.
-// (See accompanying file LICENSE_1_0.txt or copy at
+// (See accompanying file LICENSE or copy at
 // https://www.boost.org/LICENSE_1_0.txt)
 
 #if __cplusplus >= 201103L
 
-#ifndef RAFFER_FINALLY_FINALLY_HPP
-#define RAFFER_FINALLY_FINALLY_HPP
+#ifndef GPL_FINALLY_FINALLY_HPP
+#define GPL_FINALLY_FINALLY_HPP
 
 
 #include <functional>
 
 
-namespace raffer // interface
-{
+namespace gpl { // interface
 
-class finally
-{
-	std::function<void ()> action;
+class finally {
+	private: std::function<void ()> action;
 
-public:
-	explicit finally(std::function<void ()> action);
-	~finally();
+
+	public: explicit finally(std::function<void ()> action);
+	public: ~finally();
 };
 
 } // namespace raffer
 
 
-#endif // RAFFER_FINALLY_FINALLY_HPP
+#endif // GPL_FINALLY_FINALLY_HPP
 
 #endif //  __cplusplus >= 201103L
